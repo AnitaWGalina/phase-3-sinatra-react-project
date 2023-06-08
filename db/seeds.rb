@@ -14,13 +14,14 @@ end
 
 
 puts "Seeding water_supply..."
-
+supply_received=["Received", "Not received"]
+account_status=["Balance", "No Balance"]
 20 times.do
-       water_supply.create(
+        water_supply.create(
                 name: Faker::User.name,
                 location: Faker::Address.city,
-                supplyreceived:"Not received",
-                account_status:"No Balance"
+                supply_received: supply_received.sample,
+                account_status: account_status.sample,
 
 )
 
@@ -32,7 +33,7 @@ puts "Seeding water_complaints..."
         water_complaints.create(
             name: Faker::User.name,
             location: Faker::Address.city,
-            account_status:"No Balance"
+            account_status:"No Balance",
             description:"We have not received the weekly supply of water and are therefore kindly requesting for guidance on how to proceed"
         )
 end
@@ -43,8 +44,9 @@ puts "Seeding electricity_complaints..."
     electricity_complaints.create(
         name: Faker::User.name,
         location: Faker::Address.city,
-        account_status:"No Balance"
-        description:""
+        account_status:"No Balance",
+        description:"Currently experiencing a power outage which has not resolved for the past 5 hours 
+                    and are therefore kindly requesting for assistance"
     )
 end
 # Seed your database here
