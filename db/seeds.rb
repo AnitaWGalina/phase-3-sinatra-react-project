@@ -1,6 +1,6 @@
 puts "🌱 Seeding users..."
 20.times do 
-    User.create(
+    users.create(
         name: Faker::User.name,
         email: Faker::Internet.email,
         password: <PASSWORD>,
@@ -13,40 +13,40 @@ puts "🌱 Seeding users..."
 end
 
 
-puts "Seeding watersupply..."
+puts "Seeding water_supply..."
 
 20 times.do
-       watersupply.create(
+       water_supply.create(
                 name: Faker::User.name,
                 location: Faker::Address.city,
-                supplyreceived:
-                account_status:
+                supplyreceived:"Not received",
+                account_status:"No Balance"
 
 )
 
 end
 
 
-puts "waterComplaints..."
+puts "Seeding water_complaints..."
 10 times.do
-        waterComplaints.create(
+        water_complaints.create(
             name: Faker::User.name,
             location: Faker::Address.city,
-            account_status:
-            description:
+            account_status:"No Balance"
+            description:"We have not received the weekly supply of water and are therefore kindly requesting for guidance on how to proceed"
         )
 end
 
 
-puts "electricitycomplaints..."
+puts "Seeding electricity_complaints..."
 10 times.do
-    electricityComplaints.create(
+    electricity_complaints.create(
         name: Faker::User.name,
         location: Faker::Address.city,
-        account_status:
-        description:
+        account_status:"No Balance"
+        description:""
     )
-
+end
 # Seed your database here
 
 

@@ -1,6 +1,6 @@
 class CreateWatercomplaints < ActiveRecord::Migration[6.1]
   def change
-    create_table :watercomplaints do |t|
+    create_table :water_complaints do |t|
       t.string :name
       t.string :location
       t.string :description
