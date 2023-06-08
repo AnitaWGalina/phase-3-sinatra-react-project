@@ -3,7 +3,7 @@ class CreateWatersupply < ActiveRecord::Migration[6.1]
     create_table :watersupply do |t|
       t.string :name
       t.string :location
-      t.string :watersupplyreceived
+      t.string :supplyreceived
       t.boolean :account_status, default: false
       t.timestamps null: false
       
